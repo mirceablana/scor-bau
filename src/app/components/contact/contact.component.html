@@ -1,0 +1,60 @@
+<section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Schreiben Sie uns eine Nachricht</h2>
+        <p>Haben Sie Fragen? Wir sind hier, um zu helfen</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Kontact Informationen</h3>
+        <br>
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>Einzelunternehmen</h4>
+              <p>Coroiu Gheorghe Sergiu</p>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>Adresse</h4>
+              <p>Josef Ludwig Straße 3, 65549 Limburg an der Lahn</p>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>Email</h4>
+              <p>scor&#64;scor-bau.com</p>
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>Telefon</h4>
+              <p>+49 64 319 096 659</p>
+            </div>
+          </div>
+        </div>
+        
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <br><br><br>
+          <input type="text" formControlName="name" placeholder="Ihr Name *" required>
+          <input type="email" formControlName="email" placeholder="Ihr Email *" required>
+          <input type="phone" formControlName="email" placeholder="Ihr Telefon *" required>
+          <!-- <input type="text" formControlName="subject" placeholder="Subject"> -->
+          <textarea formControlName="message" placeholder="Schreiben Sie uns eine ausführliche Nachricht  *" required></textarea>
+          <button type="submit" class="btn" [disabled]="contactForm.invalid">Abschicken</button>
+        </form>
+      </div>
+    </div>
+  </section>
